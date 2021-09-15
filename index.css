@@ -1,0 +1,33 @@
+.hidden {
+    display: none;
+}
+
+
+
+#gameField {
+    width: fit-content;
+    height: fit-content;
+    padding: 4px;
+    background: hsl(0deg 0% 0% / 0%);
+
+    display: grid;
+    grid-gap: 1px;
+}
+
+.gameField10 {
+    grid-template-columns: repeat(10,36px);
+    grid-template-rows: repeat(10,36px);
+}
+.gameField20 {
+    grid-template-columns: repeat(20,24px);
+    grid-template-rows: repeat(20,24px);
+}
+.gameField30 {
+    grid-template-columns: repeat(30,16px);
+    grid-template-rows: repeat(30,16px);
+}
+
+.cell{
+    border: 1px solid rgb(12, 172, 172);
+    background: hsl(0deg 0% 0% / 20%);
+}
