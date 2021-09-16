@@ -1,14 +1,8 @@
-.hidden {
-    display: none;
-}
-
-
-
-#gameField {
+.gameField {
     width: fit-content;
     height: fit-content;
     padding: 4px;
-    background: hsl(0deg 0% 0% / 0%);
+    background:rgba(194, 88, 171, 0.281);
 
     display: grid;
     grid-gap: 1px;
@@ -30,4 +24,30 @@
 .cell{
     border: 1px solid rgb(12, 172, 172);
     background: hsl(0deg 0% 0% / 20%);
+    font-size: 30px;
+    color: aquamarine;
+    font-style: initial;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.bomb{
+    border: 2px solid rgb(209, 29, 5);
+    background: url(bomb.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.ccc{
+    border: 1px solid yellowgreen;
+    background-color: azure;
+    font-size: 10px ;
+    color: aquamarine;
+    font-style: initial;
+    text-align: center;
+
 }
