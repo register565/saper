@@ -1,7 +1,7 @@
 .gameField {
     width: fit-content;
     height: fit-content;
-    padding: 4px;
+    padding: 2px;
     background:rgba(194, 88, 171, 0.281);
 
     display: grid;
@@ -9,16 +9,17 @@
 }
 
 .gameField10 {
-    grid-template-columns: repeat(10,36px);
-    grid-template-rows: repeat(10,36px);
+    grid-template-columns: repeat(10,30px);
+    grid-template-rows: repeat(10,30px);
 }
 .gameField20 {
-    grid-template-columns: repeat(20,24px);
-    grid-template-rows: repeat(20,24px);
+    grid-template-columns: repeat(20,30px);
+    grid-template-rows: repeat(20,30px);
 }
 .gameField30 {
-    grid-template-columns: repeat(30,16px);
-    grid-template-rows: repeat(30,16px);
+    grid-template-columns: repeat(30,30px);
+    grid-template-rows: repeat(30,30px);
+    
 }
 
 .cell{
@@ -37,16 +38,68 @@
 .bomb{
     border: 2px solid rgb(209, 29, 5);
     background: url(bomb.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
-.ccc{
+.numbers1{
     border: 1px solid yellowgreen;
     background-color: azure;
-    font-size: 10px ;
-    color: aquamarine;
+    font-size: 0px ;
+    color: rgb(84, 184, 150);
+    font-style: initial;
+    text-align: center;
+
+}
+
+.numbers2 {
+    border: 1px solid yellowgreen;
+    background-color: azure;
+    font-size: 27px ;
+    color: rgb(18, 109, 55);
+    font-style: initial;
+    text-align: center;
+
+}
+
+.numbers3{
+    border: 1px solid yellowgreen;
+background-color: azure;
+font-size: 27px ;
+color: rgb(168, 166, 1);
+font-style: initial;
+text-align: center;
+}
+
+.numbers4{
+
+    border: 1px solid yellowgreen;
+    background-color: azure;
+    font-size: 27px ;
+    color: rgb(139, 104, 6);
+    font-style: initial;
+    text-align: center;
+
+}
+
+.numbers5{
+
+    border: 1px solid yellowgreen;
+    background-color: azure;
+    font-size: 27px ;
+    color: rgb(196, 52, 8);
+    font-style: initial;
+    text-align: center;
+
+}
+
+.numbers6{
+
+    border: 1px solid yellowgreen;
+    background-color: azure;
+    font-size: 27px ;
+    color: rgb(0, 0, 0);
     font-style: initial;
     text-align: center;
 
