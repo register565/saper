@@ -1,9 +1,9 @@
 .gameField {
     width: fit-content;
     height: fit-content;
-    padding: 2px;
+    padding: 0px;
     background:rgba(194, 88, 171, 0.281);
-
+    
     display: grid;
     grid-gap: 1px;
 }
@@ -23,12 +23,17 @@
 }
 
 .cell{
-    border: 1px solid rgb(12, 172, 172);
+    border: 2px #7922CC;
     background: hsl(0deg 0% 0% / 20%);
     font-size: 30px;
-    color: aquamarine;
+    color: #7922CC;
     font-style: initial;
     text-align: center;
+    user-select: none;
+    background-color: #EEDDFF;
+  border: 2px solid #7922CC;
+    
+    border-radius: 5px;
 }
 
 .hidden {
@@ -44,8 +49,8 @@
 }
 
 .numbers1{
-    border: 1px solid yellowgreen;
-    background-color: azure;
+    border: 2px solid #00CED1;
+    background-color: #E0FFFF	;
     font-size: 0px ;
     color: rgb(84, 184, 150);
     font-style: initial;
@@ -54,9 +59,9 @@
 }
 
 .numbers2 {
-    border: 1px solid yellowgreen;
-    background-color: azure;
-    font-size: 27px ;
+    border: 2px solid #00CED1;
+    background-color: #E0FFFF	;
+    font-size: 25px ;
     color: rgb(18, 109, 55);
     font-style: initial;
     text-align: center;
@@ -64,8 +69,8 @@
 }
 
 .numbers3{
-    border: 1px solid yellowgreen;
-background-color: azure;
+    border: 2px solid #00CED1;
+background-color: #E0FFFF	;
 font-size: 27px ;
 color: rgb(168, 166, 1);
 font-style: initial;
@@ -74,8 +79,8 @@ text-align: center;
 
 .numbers4{
 
-    border: 1px solid yellowgreen;
-    background-color: azure;
+    border: 2px solid #00CED1;
+    background-color: #E0FFFF	;
     font-size: 27px ;
     color: rgb(139, 104, 6);
     font-style: initial;
@@ -85,8 +90,8 @@ text-align: center;
 
 .numbers5{
 
-    border: 1px solid yellowgreen;
-    background-color: azure;
+    border: 2px solid #00CED1;
+    background-color: #E0FFFF	;
     font-size: 27px ;
     color: rgb(196, 52, 8);
     font-style: initial;
@@ -96,11 +101,18 @@ text-align: center;
 
 .numbers6{
 
-    border: 1px solid yellowgreen;
-    background-color: azure;
+    border: 2px solid #00CED1;
+    background-color: #E0FFFF	;
     font-size: 27px ;
     color: rgb(0, 0, 0);
     font-style: initial;
     text-align: center;
 
+}
+.bomb1{
+    border: 2px solid rgb(209, 29, 5);
+    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }

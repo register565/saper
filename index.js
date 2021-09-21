@@ -14,15 +14,15 @@ const gameBlock = document.querySelector('#gameBlock');
 
 const gameOver = document.querySelector('#GameOver');
 const btnOver = document.querySelector('#btnOver');
-          function btnOverPressed(){
-            window.location.reload(false);
+function btnOverPressed() {
+  window.location.reload(false);
 
-          }
+}
 
 btnOver.addEventListener('click', btnOverPressed);
 
 
-const cells = [];
+let cells = [];
 
 function btn10Pressed() {
   renderGameField(10, 10);
@@ -46,41 +46,31 @@ function renderGameField(size, maxBombNumber) {
   const gameField = document.querySelector('#gameField');
   gameField.classList.add(`gameField${size}`);
 
-  let currentBombNumber = 0;
-
   for (let rowIndex = 0; rowIndex < size; rowIndex++) {
     for (let colIndex = 0; colIndex < size; colIndex++) {
       const cellElement = document.createElement('div');
       cellElement.classList.add('cell');
       gameField.append(cellElement);
 
-      const bombChance = getRandomIntInclusive(1, Math.floor((maxBombNumber / (size ** 2)) ** -1) - 1);
-      let isBomb = bombChance <= 1;
-
-      if (isBomb && currentBombNumber < maxBombNumber) currentBombNumber += 1;
-      else isBomb = false;
-
       const cell = {
         row: rowIndex,
         col: colIndex,
         el: cellElement,
-        isBomb: isBomb,
+        isBomb: false,
         number: 0,
         isOpen: false,
-        
+        listener: null,
       }
-      function lock() {
-         gameField.subtract('click', listener);
-      }
+
+
       cells.push(cell);
-      const listener = () => {
+      cell.listener = () => {
         cell.isOpen = true;
         if (cell.isBomb === true) {
           cell.el.classList.add('bomb');
           gameOver.classList.remove('hidden');
-         lock();
-       
-
+          gameField.classList.add('bomb1');
+          clearField();
         } else {
           cell.el.innerText = cell.number;
           if (cell.number === 0) cell.el.classList.add('numbers1');
@@ -90,25 +80,18 @@ function renderGameField(size, maxBombNumber) {
           if (cell.number === 4) cell.el.classList.add('numbers5');
           if (cell.number === 5) cell.el.classList.add('numbers6');
           if (cell.number === 0) openAroundCells(cell);
-
+          setTimeout(checkWin, 100);
         }
         console.log('CELL row/col', cell.row, cell.col, cell.isBomb, cell.number);
       };
-      cell.el.addEventListener('click', listener);
-      
+
+      cell.el.addEventListener('click', cell.listener);
+
     }
   }
+  generateBombs(size , maxBombNumber);
 
   for (const cell of cells) {
-    const leftCell = cells.find((item) => item.row === cell.row && item.col === cell.col - 1);
-    const rightCell = cells.find((item) => item.row === cell.row && item.col === cell.col + 1);
-    const topCell = cells.find((item) => item.row === cell.row - 1 && item.col === cell.col);
-    const botCell = cells.find((item) => item.row === cell.row + 1 && item.col === cell.col);
-    const RTCell = cells.find((item) => item.row === cell.row - 1 && item.col === cell.col + 1);
-    const LTCell = cells.find((item) => item.row === cell.row - 1 && item.col === cell.col - 1);
-    const RBCell = cells.find((item) => item.row === cell.row + 1 && item.col === cell.col + 1);
-    const LBCell = cells.find((item) => item.row === cell.row + 1 && item.col === cell.col - 1);
-
     const cellsAround = getCellsAround(cell.col, cell.row);
 
     let count = 0;
@@ -129,6 +112,14 @@ function renderGameField(size, maxBombNumber) {
   btn20.classList.add('hidden');
   btn30.classList.add('hidden');
   gameField.classList.remove('hidden');
+}
+
+function clearField() {
+  for (const cell of cells) {
+    cell.el.removeEventListener('click', cell.listener);
+  }
+  // gameField.innerHTML = '';
+  cells = [];
 }
 
 
@@ -154,7 +145,7 @@ function getCellsAround(x, y) {
 
 function openAroundCells(cell) {
   const cellsAround = getCellsAround(cell.col, cell.row);
-  console.log(cellsAround);
+
   sideToCells(cellsAround.left);
   sideToCells(cellsAround.right);
   sideToCells(cellsAround.top);
@@ -176,3 +167,34 @@ function sideToCells(cell) {
   if (cell.number === 0) openAroundCells(cell);
 }
 
+function checkWin() {
+  let isWin = true;
+  for (const cell of cells) {
+    if (!cell.isBomb && !cell.isOpen) {
+      isWin = false;
+      break;
+    }
+    if (cell.isBomb && cell.isOpen) {
+      isWin = false;
+      
+      break;
+    }
+  }
+
+  if (isWin) alert('WIN');
+  return isWin;
+}
+
+function generateBombs(size, maxBombNumber) {
+  for (let i = 0; i < maxBombNumber; i += 1) {
+    const colIndex = getRandomIntInclusive(0, size - 1);
+    const rowIndex = getRandomIntInclusive(0, size - 1);
+    const cell = cells.find((item) => item.row === rowIndex && item.col === colIndex);
+    if (cell.isBomb) {
+      i -= 1;
+      continue;
+    } else {
+      cell.isBomb = true;
+    }
+  }
+}

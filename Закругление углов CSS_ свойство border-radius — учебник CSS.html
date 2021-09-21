@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<!-- saved from url=(0067)https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius -->
+<html lang="ru-RU" prefix="og: http://ogp.me/ns#" class="js no-flexbox flexbox-legacy rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent wf-scada-n4-active wf-ptsansnarrow-n4-active wf-droidsans-n4-inactive wf-active"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- Basic Page Needs
+  ================================================== -->
+
+
+<link rel="alternate" hreflang="ru" href="https://idg.net.ua/blog/">
+
+<link rel="shortcut icon" href="https://idg.net.ua/blog/wp-content/uploads/favicon.png"><title>
+Закругление углов CSS: свойство border-radius — учебник CSS</title>
+
+<div class="fit-vids-style">­<style>               .fluid-width-video-wrapper {                 width: 100%;                              position: relative;                       padding: 0;                            }                                                                                   .fluid-width-video-wrapper iframe,        .fluid-width-video-wrapper object,        .fluid-width-video-wrapper embed {           position: absolute;                       top: 0;                                   left: 0;                                  width: 100%;                              height: 100%;                          }                                       </style></div><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f.txt"></script><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/all.js" async="" crossorigin="anonymous"></script><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/osd.js"></script><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(1).txt"></script><script type="text/javascript" async="" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/recaptcha__ru.js" crossorigin="anonymous" integrity="sha384-wT2za0kH673yOGSsGFZ7FSfqUdK/mxDPKw+YaKPJlMNsi4YmVy+K2V09pel606KZ"></script><script id="facebook-jssdk" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/all(1).js"></script><script async="" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/analytics.js"></script><script type="text/javascript" async="" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/watch.js"></script><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(2).txt" id="google_shimpl"></script><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/webfont.js" type="text/javascript" async=""></script><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/jquery.min.js"></script>
+<script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/jquery-ui.js"></script><!--Подключаем библиотеку Jquery UI-->
+<script type="text/javascript">// <![CDATA[
+function GoTo(link){window.open(link.replace("_","http://"));}
+// ]]></script>
+<script async="" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(3).txt"></script>
+<!-- header -->
+<meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/wp-emoji-release.min.js" type="text/javascript" defer=""></script><meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="stylesheet" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/css" media="all"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><link rel="preload" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(4).txt" as="script"><script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(4).txt"></script><link rel="preload" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(5).txt" as="script"><script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(5).txt"></script><link rel="preload" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(4).txt" as="script"><script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(4).txt"></script><link rel="preload" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(5).txt" as="script"><script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(5).txt"></script><style type="text/css" data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_dialog_advanced{border-radius:8px;padding:10px}.fb_dialog_content{background:#fff;color:#373737}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{left:5px;right:auto;top:5px}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{height:100%;left:0;margin:0;overflow:visible;position:absolute;top:-10000px;transform:none;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{background:none;height:auto;min-height:initial;min-width:initial;width:auto}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{clear:both;color:#fff;display:block;font-size:18px;padding-top:20px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .4);bottom:0;left:0;min-height:100%;position:absolute;right:0;top:0;width:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_mobile .fb_dialog_iframe{position:sticky;top:0}.fb_dialog_content .dialog_header{background:linear-gradient(from(#738aba), to(#2c4987));border-bottom:1px solid;border-color:#043b87;box-shadow:white 0 1px 1px -1px inset;color:#fff;font:bold 14px Helvetica, sans-serif;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:linear-gradient(from(#4267B2), to(#2a4887));background-clip:padding-box;border:1px solid #29487d;border-radius:3px;display:inline-block;line-height:18px;margin-top:3px;max-width:85px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{background:none;border:none;color:#fff;font:bold 12px Helvetica, sans-serif;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #4a4a4a;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f5f6f7;border:1px solid #4a4a4a;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-position:50% 50%;background-repeat:no-repeat;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}
+.fb_mpn_mobile_landing_page_slide_out{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_out_from_left{animation-duration:200ms;animation-name:fb_mpn_landing_page_slide_out_from_left;transition-timing-function:ease-in}.fb_mpn_mobile_landing_page_slide_up{animation-duration:500ms;animation-name:fb_mpn_landing_page_slide_up;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_in{animation-duration:300ms;animation-name:fb_mpn_bounce_in;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out{animation-duration:300ms;animation-name:fb_mpn_bounce_out;transition-timing-function:ease-in}.fb_mpn_mobile_bounce_out_v2{animation-duration:300ms;animation-name:fb_mpn_fade_out;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_v2{animation-duration:300ms;animation-name:fb_bounce_in_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_in_from_left{animation-duration:300ms;animation-name:fb_bounce_in_from_left;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_v2{animation-duration:300ms;animation-name:fb_bounce_out_v2;transition-timing-function:ease-in}.fb_customer_chat_bounce_out_from_left{animation-duration:300ms;animation-name:fb_bounce_out_from_left;transition-timing-function:ease-in}.fb_invisible_flow{display:inherit;height:0;overflow-x:hidden;width:0}@keyframes fb_mpn_landing_page_slide_out{0%{margin:0 12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;margin:0 24px;width:60px}}@keyframes fb_mpn_landing_page_slide_out_from_left{0%{left:12px;width:100% - 24px}60%{border-radius:18px}100%{border-radius:50%;left:12px;width:60px}}@keyframes fb_mpn_landing_page_slide_up{0%{bottom:0;opacity:0}100%{bottom:24px;opacity:1}}@keyframes fb_mpn_bounce_in{0%{opacity:.5;top:100%}100%{opacity:1;top:0}}@keyframes fb_mpn_fade_out{0%{bottom:30px;opacity:1}100%{bottom:0;opacity:0}}@keyframes fb_mpn_bounce_out{0%{opacity:1;top:0}100%{opacity:.5;top:100%}}@keyframes fb_bounce_in_v2{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}50%{transform:scale(1.03, 1.03);transform-origin:bottom right}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}}@keyframes fb_bounce_in_from_left{0%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}50%{transform:scale(1.03, 1.03);transform-origin:bottom left}100%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}}@keyframes fb_bounce_out_v2{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom right}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom right}}@keyframes fb_bounce_out_from_left{0%{opacity:1;transform:scale(1, 1);transform-origin:bottom left}100%{opacity:0;transform:scale(0, 0);transform-origin:bottom left}}@keyframes slideInFromBottom{0%{opacity:.1;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}@keyframes slideInFromBottomDelay{0%{opacity:0;transform:translateY(100%)}97%{opacity:0;transform:translateY(100%)}100%{opacity:1;transform:translateY(0)}}</style></head><body class="page-template-default page page-id-6761 page-child parent-pageid-3927 chrome" aria-hidden="false"><ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-2485642443475791" data-ad-slot="3287535402" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_0_expand" style="border: none; height: 280px; width: 942px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_0_anchor" style="border: none; height: 280px; width: 942px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:942px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="942" height="280" frameborder="0" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/ads.html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!1" data-google-query-id="CPnJwsrWj_MCFXRKwgods9sLAg" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+  
+
+    <!-- Embed Google Web Fonts Via API -->
+    <script type="text/javascript">
+          WebFontConfig = {
+            google: { families: [ 
+                    "PT Sans Narrow::cyrillic,latin",
+                    "PT Sans Narrow::cyrillic,latin",                   
+                    "Scada::cyrillic,latin",                   
+                    "Droid Sans::cyrillic,latin", 
+                    "PT Sans Narrow::cyrillic,latin"] }
+          };
+          (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+          })();
+    </script>
+
+<link href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/style.css" rel="stylesheet" type="text/css" media="all">
+<!--Site Layout -->
+
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.5.3.3 - https://yoast.com/wordpress/plugins/seo/ -->
+<meta name="description" content="Как закруглить углы в CSS? С помощью свойства border-radius можно легко сделать закругленные углы у элементов HTML. Примеры кода для скругления краев.">
+<link rel="canonical" href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius">
+<link rel="author" href="https://plus.google.com/+KarinaIndigo">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Закругление углов CSS: свойство border-radius — учебник CSS">
+<meta property="og:description" content="Как закруглить углы в CSS? С помощью свойства border-radius можно легко сделать закругленные углы у элементов HTML. Примеры кода для скругления краев.">
+<meta property="og:url" content="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius">
+<meta property="og:site_name" content="Блог Indigo">
+<meta property="og:image" content="https://idg.net.ua/blog/wp-content/uploads/princip-zakrugleniya-uglov-css.jpg">
+<meta property="og:image" content="https://idg.net.ua/blog/wp-content/uploads/border-radius-css.png">
+<meta property="og:image" content="https://idg.net.ua/blog/wp-content/uploads/border-radius-css3.png">
+<meta property="og:image" content="https://idg.net.ua/blog/wp-content/uploads/elliptic-border-radius-css.png">
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="https://s.w.org/">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/11\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/idg.net.ua\/blog\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.18"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])?!1:!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55358,56760,9792,65039],[55358,56760,8203,9792,65039])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<!--[if IE 7]>
+<link rel='stylesheet' id='ie7-css'  href='https://idg.net.ua/blog/wp-content/themes/extranews/css/ie7.css?ver=ie7' type='text/css' media='all' />
+<![endif]-->
+<!--[if IE 8]>
+<link rel='stylesheet' id='ie8-css'  href='https://idg.net.ua/blog/wp-content/themes/extranews/css/ie8.css?ver=ie8' type='text/css' media='all' />
+<![endif]-->
+<link rel="stylesheet" id="layerslider-css" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/layerslider.css" type="text/css" media="all">
+<link rel="stylesheet" id="ls-google-fonts-css" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/css(1)" type="text/css" media="all">
+<link rel="stylesheet" id="comment-rating-field-plugin-rating-css" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/rating.css" type="text/css" media="all">
+<link rel="stylesheet" id="contact-form-7-css" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/styles.css" type="text/css" media="all">
+<link rel="stylesheet" id="wpProQuiz_front_style-css" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/wpProQuiz_front.min.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-pagenavi-css" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/pagenavi-css.css" type="text/css" media="all">
+<link rel="stylesheet" id="options-css" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/custom.css" type="text/css" media="all">
+<link rel="stylesheet" id="mr_social_sharing-css" href="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/style_2.1.2.css" type="text/css" media="all">
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/jquery.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/jquery.form.min.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"https:\/\/idg.net.ua\/blog\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"\u041e\u0442\u043f\u0440\u0430\u0432\u043a\u0430...","cached":"1"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/scripts.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/wpcf7.js"></script>
+<link rel="https://api.w.org/" href="https://idg.net.ua/blog/wp-json/">
+<meta name="generator" content="WordPress 4.9.18">
+<link rel="alternate" type="application/json+oembed" href="https://idg.net.ua/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fidg.net.ua%2Fblog%2Fuchebnik-css%2Fispolzovanie-css%2Fborder-radius">
+<link rel="alternate" type="text/xml+oembed" href="https://idg.net.ua/blog/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fidg.net.ua%2Fblog%2Fuchebnik-css%2Fispolzovanie-css%2Fborder-radius&amp;format=xml">
+		<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		
+<!-- BEGIN recaptcha, injected by plugin wp-recaptcha-integration  -->
+
+<!-- END recaptcha -->
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+
+
+<!-- Mobile Specific Metas
+  ================================================== -->
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.6">
+
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter9776767 = new Ya.Metrika({id:9776767,
+                    webvisor:true,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true});
+        } catch(e) { }
+    });
+
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f, false);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/9776767" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script> 
+ (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ 
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), 
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) 
+ })(window,document,'script','https://www.google-analytics.com/analytics.js','ga'); 
+
+ ga('create', 'UA-51858661-2', 'auto'); 
+ ga('send', 'pageview'); 
+
+</script> 
+<script async="" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(3).txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2485642443475791",
+    enable_page_level_ads: true
+  });
+</script><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"><ins id="aswift_1_expand" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_1_anchor" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block;"><iframe id="aswift_1" name="aswift_1" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/ads(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!2" data-load-complete="true"></iframe></ins></ins></ins>
+
+
+
+<noscript>
+  <div class="alert">
+    <p>Пожалуйста, включите JavaScript для просмотра этого сайта.</p>
+  </div>
+</noscript>
+
+<!-- Preload Images 
+	================================================== -->
+<div id="preloaded-images"> 
+  <!-- Icons -->
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/e_light.png" width="1" height="1" alt="Image">
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/fb_light.png" width="1" height="1" alt="Image">
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/g_light.png" width="1" height="1" alt="Image">
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/p_light.png" width="1" height="1" alt="Image">
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/tw_light.png" width="1" height="1" alt="Image">
+  <!-- Slider Elements -->
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/linebg-fade.png" width="1" height="1" alt="Image">
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/75black.png" width="1" height="1" alt="Image">
+  <!--Loading Images -->
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/loading.gif" width="1" height="1" alt="Image">
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/small-loading.gif" width="1" height="1" alt="Image">
+  <!-- Arrows -->
+  <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/stars-over.png" width="1" height="1" alt="Image">
+</div>
+
+<!-- Top Bar
+	================================================== -->
+       <div class="topbar">
+      <div class="container clearfix">
+        <p class="alignleft">Блог Indigo | 21.09.2021</p> 
+          <div class="alignright">        
+            
+                        <ul id="menu-idg-menu" class="sf-menu sf-js-enabled sf-shadow"><li id="menu-item-4448" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4448"><a href="https://idg.net.ua/">Создание сайтов</a></li>
+<li id="menu-item-4453" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4453"><a href="https://idg.net.ua/seo/">Раскрутка сайтов</a></li>
+<li id="menu-item-4451" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4451"><a href="https://idg.net.ua/portfolio">Портфолио</a></li>
+<li id="menu-item-4449" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4449"><a href="https://idg.net.ua/seo/uslugi-internet-marketing">Услуги</a></li>
+<li id="menu-item-7471" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7471"><a href="https://idg.net.ua/kontakty">Контакты</a></li>
+</ul>            
+            <div id="top"></div>
+
+            <div class="mobilenavcontainer"> 
+                            <a id="jump_top" href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#mobilenav_top" class="scroll">Выберите рубрику:</a><div class="clear"></div>
+              <div class="mobilenavigation">
+                                      <ul id="mobilenav_top"><li id="back_top"><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#top" class="menutop">Свернуть меню</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4448"><a href="https://idg.net.ua/">Создание сайтов</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4453"><a href="https://idg.net.ua/seo/">Раскрутка сайтов</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4451"><a href="https://idg.net.ua/portfolio">Портфолио</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4449"><a href="https://idg.net.ua/seo/uslugi-internet-marketing">Услуги</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7471"><a href="https://idg.net.ua/kontakty">Контакты</a></li>
+</ul>                              </div> 
+              <div class="clear"></div>
+            </div> 
+			<div class="clear"></div>
+          </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+
+<!-- Site Container
+  ================================================== -->
+<div class="sitecontainer container" style="height: auto !important;">
+<div class="container clearfix navcontainer fixedheader">
+    <div class="logo">
+         <a href="https://idg.net.ua/">
+                        <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/logo_header.png" alt="На главную idg.net.ua" title="На главную idg.net.ua">
+                        </a> 
+        
+    </div>
+    <div class="mobileclear"></div>
+    <div class="headerwidget">
+        <div class="logowidget">
+          		  <div class="phone">
+						<span>(044)432-8888</span><br>
+						
+						<div class="wrapper"><span class="open-popup call"><a style="color:#7a7a7a;" href="https://idg.net.ua/order">заказать обратный звонок</a></span></div>
+					</div>
+        </div>
+    </div>
+    <div class="clear"></div>
+    	<div class="nav"><div class="clear"></div>
+        <!--Start Navigation-->
+                          <ul id="menu-main_menu" class="sf-menu sf-js-enabled sf-shadow"><li id="menu-item-4170" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4170"><a href="https://idg.net.ua/blog/">Главная</a></li>
+<li id="menu-item-74" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-74"><a href="https://idg.net.ua/blog/dizajn">Веб-дизайн</a></li>
+<li id="menu-item-4169" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4169"><a href="https://idg.net.ua/blog/seo">SEO</a></li>
+<li id="menu-item-75" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-75"><a href="https://idg.net.ua/blog/yuzabiliti">Юзабилити</a></li>
+<li id="menu-item-1847" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1847"><a href="https://idg.net.ua/blog/vdohnovenie">Вдохновение</a></li>
+<li id="menu-item-72" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-72"><a href="https://idg.net.ua/blog/biznes">Бизнес</a></li>
+<li id="menu-item-213" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-213"><a href="https://idg.net.ua/blog/veb-instrumenty">Инструменты</a></li>
+<li id="menu-item-2232" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2232"><a href="https://idg.net.ua/blog/polezno-znat">Полезно знать</a></li>
+<li id="menu-item-70" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70"><a href="https://idg.net.ua/blog/html-css">HTML, CSS</a></li>
+<li id="menu-item-3014" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-3014"><a href="https://idg.net.ua/blog/uchebnik-css">Учебник CSS</a></li>
+</ul>                        <div class="clear"></div>
+             <div class="clear"></div>
+         </div>
+
+       <div class="mobilenavcontainer"> 
+               <a id="jump" href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#mobilenav" class="scroll">Выберите рубрику:</a>
+       <div class="clear"></div>
+        <div class="mobilenavigation">
+                        <ul id="mobilenav"><li id="back"><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#top" class="menutop">Свернуть меню</a></li><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4170"><a href="https://idg.net.ua/blog/">Главная</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-74"><a href="https://idg.net.ua/blog/dizajn">Веб-дизайн</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4169"><a href="https://idg.net.ua/blog/seo">SEO</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-75"><a href="https://idg.net.ua/blog/yuzabiliti">Юзабилити</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1847"><a href="https://idg.net.ua/blog/vdohnovenie">Вдохновение</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-72"><a href="https://idg.net.ua/blog/biznes">Бизнес</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-213"><a href="https://idg.net.ua/blog/veb-instrumenty">Инструменты</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2232"><a href="https://idg.net.ua/blog/polezno-znat">Полезно знать</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-70"><a href="https://idg.net.ua/blog/html-css">HTML, CSS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-3014"><a href="https://idg.net.ua/blog/uchebnik-css">Учебник CSS</a></li>
+</ul>                    </div> 
+
+        <div class="clear"></div>
+      </div>
+
+        <!--End Navigation-->
+    <div class="clear"></div>
+</div>
+<div class="top" style="display: block;"> <a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#">Наверх</a>
+    <div class="clear"></div>
+    <div class="scroll">
+        <p>
+            Наверх        </p>
+    </div>
+</div>
+<!-- Start Mainbody
+  ================================================== -->
+<div class="mainbody " style="height: auto !important;">
+
+<div class="container clearfix titlecontainer" style="height: auto !important;">
+  
+    <!-- Page Title
+    ================================================== -->
+    <div class="pagetitlewrap">
+	
+	<!-- Хлебные крошки на страницах + отсеиваем ненужные страницы по ИД -->
+		<div class="breadcrumbs" xmlns:v="http://rdf.data-vocabulary.org/#"><a href="https://idg.net.ua/blog/" rel="v:url" property="v:title">Главная</a> » <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://idg.net.ua/blog/uchebnik-css">Современный учебник CSS</a></span> » <span typeof="v:Breadcrumb"><a rel="v:url" property="v:title" href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css">Использование CSS</a></span> » <span class="current">Border-radius: закругленные углы в CSS</span></div><!-- .breadcrumbs -->  
+		
+        <h1 class="pagetitle">
+           Border-radius: закругленные углы в CSS        </h1>
+        <div class="mobileclear"></div>
+        <span class="description">
+                  </span>
+    </div>
+    <div class="clear"></div>
+
+    <!-- Page Content
+      ================================================== -->
+    <div class="maincontent page">
+        <p>В предыдущем уроке мы изучили, как задать границу для элемента. Также были рассмотрены такие свойства как <code>border-color</code> и <code>border-style</code>, с помощью которых можно настраивать цвет и стиль границы. Однако все рамки у нас получались с прямыми углами. <span id="more-6761"></span>Теперь мы расскажем, каким образом можно сделать закругленные углы в CSS для границ.</p>
+<h3>Как закруглить углы: свойство CSS3 border-radius</h3>
+<p>Закругление углов в CSS можно сделать для любого элемента HTML-страницы. Для этого необходимо применить к нему свойство <code>border-radius</code> с соответствующим значением. Чаще всего значение указывается в пикселях, но можно также использовать и другие единицы, например, em или проценты (в последнем случае вычисление производится относительно ширины блока).</p>
+<p>Эффект данного свойства будет заметен только при условии, что у стилизуемого элемента имеется цветной фон и/или граница. Например:</p>
+<pre class="brush: css; title: ; notranslate" title="">.borderElement {
+  background-color: #EEDDFF;
+  border: 6px solid #7922CC;
+  border-radius: 25px;
+}
+</pre>
+<p>Стиль, описанный выше, даст следующий результат на элементе <code>&lt;div&gt;</code> размером 200×200 пикселей:</p>
+<figure>
+<img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/border-radius-css.png" alt="Результат применения свойства border-radius"><br>
+</figure>
+<p>Вы также можете сделать закругленные края только для верхних или нижних углов элемента либо задать каждому углу разный радиус скругления — большое поле для фантазии! Пример:</p>
+<pre class="brush: css; title: ; notranslate" title="">.borderElement {
+  background-color: #EEDDFF;
+  border: 6px solid #7922CC;
+  border-radius: 25px;
+}
+
+.borderElement1 {
+  background-color: #FFE8DB;
+  border: 6px solid #FF5A00;
+  border-radius: 15px 100px 15px 100px;
+}
+</pre>
+<figure>
+<img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/border-radius-css3.png" alt="Разный радиус скругления с border-radius"><br>
+</figure>
+<p>Но и это еще не всё: вместо простых круглых углов можно задавать эллиптическое скругление. Для этого понадобится указать два значения, разделенные косой чертой (для горизонтальной и вертикальной полуосей эллипса). Приведем пример на блоке размером 150×450 пикселей:</p>
+<pre class="brush: css; title: ; notranslate" title="">.borderElement {
+  background-color: #EEDDFF;
+  border: 6px solid #7922CC;
+  border-radius: 280px/100px;
+}
+</pre>
+<figure>
+<img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/elliptic-border-radius-css.png" alt="Эллиптические углы с border-radius"><br>
+</figure>
+<p>Значения можно смешивать (т.&nbsp;е. использовать в одном стиле и обычное, и эллиптическое закругление), а также добавлять персональный стиль для каждого угла, используя соответствующие свойства:</p>
+<ul>
+<li><code>border-top-left-radius</code> — для верхнего левого угла;</li>
+<li><code>border-top-right-radius</code> — для верхнего правого угла;</li>
+<li><code>border-bottom-left-radius</code> — для нижнего левого угла;</li>
+<li><code>border-bottom-right-radius</code> — для нижнего правого угла.</li>
+</ul>
+<h3>Принцип скругления углов</h3>
+<p>На рисунке ниже показано, каким образом вычисляется скругление углов в CSS. Так, если для угла указано одно значение, — например, <code>20px</code>, — это означает, что закругление будет происходить по окружности с радиусом 20 пикселей. В случае, когда задаются два значения через косую черту, например, <code>30px/20px</code>, закругление углов будет происходить по эллипсу. Первое значение в таком случае является длиной горизонтальной полуоси эллипса — <code>30px</code>, а второе — длиной вертикальной полуоси — <code>20px</code>:</p>
+<figure>
+<img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/princip-zakrugleniya-uglov-css.jpg"><br>
+</figure>
+<p>Свойство CSS border-radius поддерживается всеми современными версиями браузеров.</p>
+<p class="see-also"><strong>Далее в учебнике: </strong><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/box-shadow">свойство box-shadow — создаем тени для элементов</a>.</p>
+        
+                
+        <div class="clear"></div>
+    </div>
+
+    <!-- Sidebar
+      ================================================== -->      
+    <div class="sidebar" style="height: auto !important;">
+        <div id="search-5" class="widget widget_search"><h4 class="widget-title">Поиск</h4><!--Searchbox-->
+<form method="get" id="searchbox" action="https://idg.net.ua/blog/">
+    <fieldset>
+        <input type="text" name="s" id="s" value="Введите запрос и нажмите Enter..." onfocus="if(this.value==&#39;Введите запрос и нажмите Enter...&#39;)this.value=&#39;&#39;;" onblur="if(this.value==&#39;&#39;)this.value=&#39;Введите запрос и нажмите Enter...&#39;;">
+    </fieldset>
+</form>
+<!--Searchbox--></div><div class="clear"></div><div id="nav_menu-5" class="widget widget_nav_menu" style="height: auto !important;"><h4 class="widget-title">Учебник CSS</h4><ul id="menu-css-book" class="menu" style="height: auto !important;"><li id="menu-item-3454" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-3454"><a href="https://idg.net.ua/blog/uchebnik-css">СОДЕРЖАНИЕ</a></li>
+<li id="menu-item-3455" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-3455" style="height: auto !important;"><a href="https://idg.net.ua/blog/uchebnik-css/azy-css">ЧАСТЬ I. Азы CSS</a>
+<ul class="sub-menu">
+	<li id="menu-item-3460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3460"><a href="https://idg.net.ua/blog/uchebnik-css/azy-css/sovremennoe-primenenie-html">1. Современное применение HTML</a></li>
+	<li id="menu-item-3459" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3459"><a href="https://idg.net.ua/blog/uchebnik-css/azy-css/sintaksis-css-i-podklyuchenie-k-html">2. Синтаксис CSS. Подключение внешних таблиц. Первый урок</a></li>
+	<li id="menu-item-3475" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3475"><a href="https://idg.net.ua/blog/uchebnik-css/azy-css/izuchenie-selektorov">3. Изучение селекторов</a></li>
+	<li id="menu-item-3715" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3715"><a href="https://idg.net.ua/blog/uchebnik-css/azy-css/nasledovanie-stilej">4. Наследование в CSS</a></li>
+	<li id="menu-item-3890" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3890"><a href="https://idg.net.ua/blog/uchebnik-css/azy-css/kaskadnost">5. Каскадность. Приоритеты стилей</a></li>
+</ul>
+<div class="google-auto-placed" style="width: 100%; height: auto; clear: none; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2485642443475791" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 240px;" data-ad-status="filled"><ins id="aswift_3_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 240px; width: 227px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_3_anchor" style="border: none; height: 240px; width: 227px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_3" name="aswift_3" style="left:0;position:absolute;top:0;border:0;width:227px;height:240px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="227" height="240" frameborder="0" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/ads(2).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!4" data-google-query-id="CKzlhMvWj_MCFYRIGQod4mQPOQ" data-load-complete="true"></iframe></ins></ins></ins></div></li>
+<li id="menu-item-3971" class="menu-item menu-item-type-post_type menu-item-object-page current-page-ancestor menu-item-has-children menu-item-3971" style="height: auto !important;"><div class="google-auto-placed" style="width: 100%; height: auto; clear: none; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2485642443475791" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 240px;" data-ad-status="filled"><ins id="aswift_4_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 240px; width: 227px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_4_anchor" style="border: none; height: 240px; width: 227px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_4" name="aswift_4" style="left:0;position:absolute;top:0;border:0;width:227px;height:240px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="227" height="240" frameborder="0" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/ads(3).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!5" data-google-query-id="CLL8hcvWj_MCFaRgwgodSOUPCQ" data-load-complete="true"></iframe></ins></ins></ins></div><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css">ЧАСТЬ II. Использование CSS</a>
+<ul class="sub-menu">
+	<li id="menu-item-3972" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3972"><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/rabota-s-tekstom">1. Работа с текстом</a></li>
+	<li id="menu-item-5742" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5742"><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/rabota-s-blokami">2. Работа с блоками</a></li>
+	<li id="menu-item-9924" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9924"><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/rabota-s-grafikoj">3. Работа с графикой</a></li>
+	<li id="menu-item-10451" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10451"><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/ssylki-i-navigatsiya">4. Ссылки и навигация</a></li>
+	<li id="menu-item-10629" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10629"><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/transformirovanie-i-animatsiya">5. Трансформирование и анимация</a></li>
+	<li id="menu-item-11124" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11124"><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/tablitsy-i-formy">6. Таблицы и формы</a></li>
+</ul>
+</li>
+<li id="menu-item-11125" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11125"><a href="https://idg.net.ua/blog/uchebnik-css/razmetka-css">ЧАСТЬ III. Разметка CSS</a></li>
+<li id="menu-item-11376" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11376"><a href="https://idg.net.ua/blog/uchebnik-css/the-end">ЗАКЛЮЧЕНИЕ</a></li>
+</ul></div><div class="clear"></div><div id="ag_tab_widget-2" class="widget ag_tab_widget">
+ 
+		
+<div class="tabswrap">
+
+<ul class="tabs ">
+	<li><a class="active" href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#tab1">Популярное</a></li>
+	<li><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#tab2">Свежее</a></li>
+	 <li><a href="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#tab3">Facebook</a></li> </ul>	
+<div class="clear"></div>
+
+<ul class="tabs-content">
+
+	<!-- First Tab 
+	================================================-->
+	<li id="tab1" class="active">
+	
+		
+	<div class="tabpost">
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/devyat-prostyh-primerov-css3-perehodov">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/css3-transitions-50x50.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/css3-transitions-50x50.png 50w, https://idg.net.ua/blog/wp-content/uploads/css3-transitions-56x56.png 56w, https://idg.net.ua/blog/wp-content/uploads/css3-transitions-320x316.png 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/devyat-prostyh-primerov-css3-perehodov">Девять простых примеров CSS3 анимации</a></strong></p>
+		<p class="views"><span>405692</span> Просмотров</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	<div class="tabpost">
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/6-sajtov-s-besplatnymi-mockup">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/6-sajtov-s-mockup-50x50.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/6-sajtov-s-mockup-50x50.jpg 50w, https://idg.net.ua/blog/wp-content/uploads/6-sajtov-s-mockup-56x56.jpg 56w, https://idg.net.ua/blog/wp-content/uploads/6-sajtov-s-mockup-320x316.jpg 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/6-sajtov-s-besplatnymi-mockup">6 сайтов, где можно скачать бесплатные мокапы</a></strong></p>
+		<p class="views"><span>154534</span> Просмотров</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	<div class="tabpost">
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/kak-fotografirovat-odezhdu-i-oformlyat-stranitsu-tovara">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/kak-fotografirovat-odezhdu-i-oformlyat-stranitsu-tovara-50x50.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/kak-fotografirovat-odezhdu-i-oformlyat-stranitsu-tovara-50x50.png 50w, https://idg.net.ua/blog/wp-content/uploads/kak-fotografirovat-odezhdu-i-oformlyat-stranitsu-tovara-56x56.png 56w, https://idg.net.ua/blog/wp-content/uploads/kak-fotografirovat-odezhdu-i-oformlyat-stranitsu-tovara-320x316.png 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/kak-fotografirovat-odezhdu-i-oformlyat-stranitsu-tovara">Интернет-магазинам: как фотографировать одежду и оформлять страницу товара</a></strong></p>
+		<p class="views"><span>145175</span> Просмотров</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	<div class="tabpost">
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/video-fon-dlya-sajta-html5">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/videofon-dlya-sajta-html5-50x50.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/videofon-dlya-sajta-html5-50x50.jpg 50w, https://idg.net.ua/blog/wp-content/uploads/videofon-dlya-sajta-html5-56x56.jpg 56w, https://idg.net.ua/blog/wp-content/uploads/videofon-dlya-sajta-html5-320x316.jpg 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/video-fon-dlya-sajta-html5">Видео в качестве фона для сайта на HTML5+CSS</a></strong></p>
+		<p class="views"><span>112922</span> Просмотров</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	<div class="tabpost">
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/10-filmov-pro-it">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/filmy-pro-it-50x50.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/filmy-pro-it-50x50.png 50w, https://idg.net.ua/blog/wp-content/uploads/filmy-pro-it-56x56.png 56w, https://idg.net.ua/blog/wp-content/uploads/filmy-pro-it-320x316.png 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/10-filmov-pro-it">Фильмы и сериалы на IT-тематику</a></strong></p>
+		<p class="views"><span>82668</span> Просмотров</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	<div class="tabpost">
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/top-10-sajtov-s-parallaks-effektom">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/top-10-parallax-scrolling-sites-50x50.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="TOP-10 parallax-scrolling sites" srcset="https://idg.net.ua/blog/wp-content/uploads/top-10-parallax-scrolling-sites-50x50.png 50w, https://idg.net.ua/blog/wp-content/uploads/top-10-parallax-scrolling-sites-56x56.png 56w, https://idg.net.ua/blog/wp-content/uploads/top-10-parallax-scrolling-sites-320x316.png 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/top-10-sajtov-s-parallaks-effektom">ТОП-10: подборка сайтов с параллакс-эффектом</a></strong></p>
+		<p class="views"><span>81219</span> Просмотров</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	<div class="tabpost">
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/slide-menu-jquery">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/slide-menu-jquery-50x50.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/slide-menu-jquery-50x50.png 50w, https://idg.net.ua/blog/wp-content/uploads/slide-menu-jquery-56x56.png 56w, https://idg.net.ua/blog/wp-content/uploads/slide-menu-jquery-320x316.png 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/slide-menu-jquery">Простое боковое слайд-меню на jQuery</a></strong></p>
+		<p class="views"><span>80383</span> Просмотров</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	<div class="tabpost">
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/pravila-nabora-teksta">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/pravila-nabora-teksta-50x50.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/pravila-nabora-teksta-50x50.jpg 50w, https://idg.net.ua/blog/wp-content/uploads/pravila-nabora-teksta-56x56.jpg 56w, https://idg.net.ua/blog/wp-content/uploads/pravila-nabora-teksta-320x316.jpg 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/pravila-nabora-teksta">Облегчаем жизнь корректору: 24 правила набора текста</a></strong></p>
+		<p class="views"><span>76637</span> Просмотров</p>
+		<div class="clear"></div>
+	</div>
+
+	
+	</li>
+
+	<!-- Second Tab 
+	================================================-->
+	<li id="tab2">
+
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/sposoby-linkbildinga-dlya-postroeniya-ssylochnogo-profilya-sajta-chast-1">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/Link-Building-for-Google-SEO-Ranking-50x50.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/Link-Building-for-Google-SEO-Ranking-50x50.png 50w, https://idg.net.ua/blog/wp-content/uploads/Link-Building-for-Google-SEO-Ranking-56x56.png 56w, https://idg.net.ua/blog/wp-content/uploads/Link-Building-for-Google-SEO-Ranking-400x396.png 400w, https://idg.net.ua/blog/wp-content/uploads/Link-Building-for-Google-SEO-Ranking-320x316.png 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/sposoby-linkbildinga-dlya-postroeniya-ssylochnogo-profilya-sajta-chast-1">Способы линкбилдинга для построения ссылочного профиля сайта. Часть 1</a></strong></p>
+		<p class="views">03.04.2018</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/brend-lacoste-pomogaet-vymirayushhim-vidam-zhivotnyh">Бренд Lacoste помогает вымирающим видам животных</a></strong></p>
+		<p class="views">01.03.2018</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/professiya-linkbilder-v-seo">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/link-builder-50x50.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="профессия линкбилдер" srcset="https://idg.net.ua/blog/wp-content/uploads/link-builder-50x50.jpg 50w, https://idg.net.ua/blog/wp-content/uploads/link-builder-56x56.jpg 56w, https://idg.net.ua/blog/wp-content/uploads/link-builder-400x396.jpg 400w, https://idg.net.ua/blog/wp-content/uploads/link-builder-320x316.jpg 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/professiya-linkbilder-v-seo">Профессия линкбилдер в SEO</a></strong></p>
+		<p class="views">17.01.2018</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/primery-autrich-prakticheskie-kejsy-i-rezultaty">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/outreach-email-02-50x50.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/outreach-email-02-50x50.jpg 50w, https://idg.net.ua/blog/wp-content/uploads/outreach-email-02-56x56.jpg 56w, https://idg.net.ua/blog/wp-content/uploads/outreach-email-02-400x396.jpg 400w, https://idg.net.ua/blog/wp-content/uploads/outreach-email-02-320x316.jpg 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/primery-autrich-prakticheskie-kejsy-i-rezultaty">Примеры аутрич: практические кейсы и результаты</a></strong></p>
+		<p class="views">13.12.2017</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/infografika-v-seo-instruktsiya">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/infographics-seo-50x50.png" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="" srcset="https://idg.net.ua/blog/wp-content/uploads/infographics-seo-50x50.png 50w, https://idg.net.ua/blog/wp-content/uploads/infographics-seo-56x56.png 56w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/infografika-v-seo-instruktsiya">Инфографика в SEO – инструкция</a></strong></p>
+		<p class="views">17.11.2017</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/chto-takoe-robots-txt-dlya-seo">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/ROBOTSTXT-DLYA-SEO-kopiya-50x50.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="файл robots.txt" srcset="https://idg.net.ua/blog/wp-content/uploads/ROBOTSTXT-DLYA-SEO-kopiya-50x50.jpg 50w, https://idg.net.ua/blog/wp-content/uploads/ROBOTSTXT-DLYA-SEO-kopiya-56x56.jpg 56w, https://idg.net.ua/blog/wp-content/uploads/ROBOTSTXT-DLYA-SEO-kopiya-320x316.jpg 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/chto-takoe-robots-txt-dlya-seo">Что такое robots.txt для SEO</a></strong></p>
+		<p class="views">06.11.2017</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/autrich-v-seo-glavnye-faktory">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/seo-outreach-50x50.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="Аутрич в SEO" srcset="https://idg.net.ua/blog/wp-content/uploads/seo-outreach-50x50.jpg 50w, https://idg.net.ua/blog/wp-content/uploads/seo-outreach-56x56.jpg 56w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/autrich-v-seo-glavnye-faktory">Аутрич в SEO – главные факторы</a></strong></p>
+		<p class="views">01.11.2017</p>
+		<div class="clear"></div>
+	</div>
+	
+	<div class="tabpost">
+		
+        <div class="featuredimagewidget thumbnailarea">
+                            <a class="thumblink" href="https://idg.net.ua/blog/8-sajtov-dlya-teh-kto-zabyl-podgotovitsya-k-hellouinu">
+                    <img src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/julia-raasch-153532-50x50.jpg" class="attachment-tinyfeatured size-tinyfeatured wp-post-image" alt="Halloween" srcset="https://idg.net.ua/blog/wp-content/uploads/julia-raasch-153532-50x50.jpg 50w, https://idg.net.ua/blog/wp-content/uploads/julia-raasch-153532-56x56.jpg 56w, https://idg.net.ua/blog/wp-content/uploads/julia-raasch-153532-400x396.jpg 400w, https://idg.net.ua/blog/wp-content/uploads/julia-raasch-153532-320x316.jpg 320w" sizes="(max-width: 50px) 100vw, 50px">                </a>
+                    </div>
+
+		<p><strong><a href="https://idg.net.ua/blog/8-sajtov-dlya-teh-kto-zabyl-podgotovitsya-k-hellouinu">8 сайтов для тех, кто забыл подготовиться к Хеллоуину</a></strong></p>
+		<p class="views">27.10.2017</p>
+		<div class="clear"></div>
+	</div>
+		
+	</li>
+
+	
+	<!-- Third Tab 
+	================================================-->
+	<li id="tab3">
+		<div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; width: 0px; height: 0px;"><div></div></div></div>
+		<script type="text/javascript">(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
+		<div class="fb-like-box fb_iframe_widget" data-href="https://www.facebook.com/groupindigo" data-width="260" data-colorscheme="light" data-show-faces="true" data-border-color="#fff" data-stream="true" data-header="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=&amp;color_scheme=light&amp;container_width=0&amp;header=false&amp;href=https%3A%2F%2Fwww.facebook.com%2Fgroupindigo&amp;locale=en_US&amp;sdk=joey&amp;show_faces=true&amp;stream=true&amp;width=260"><span style="vertical-align: bottom; width: 260px; height: 0px;"><iframe name="f2568dce4aa0fd4" width="260px" height="1000px" data-testid="fb:like_box Facebook Social Plugin" title="fb:like_box Facebook Social Plugin" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" allow="encrypted-media" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/like_box.html" class="" style="border: none; visibility: visible; width: 260px; height: 0px;"></iframe></span></div>	
+	</li>
+	</ul>
+	<div class="clear"></div>
+</div>
+
+
+</div><div class="clear"></div>    </div>
+
+    <div class="clear"></div>
+
+</div>
+</div>
+</div>
+<!-- Close Mainbody and Sitecontainer and start footer
+  ================================================== -->
+<div class="clear"></div>
+<div class="google-auto-placed" style="width: 100%; height: auto; clear: both; text-align: center;"><ins data-ad-format="auto" class="adsbygoogle adsbygoogle-noablate" data-ad-client="ca-pub-2485642443475791" data-adsbygoogle-status="done" style="display: block; margin: 10px auto; background-color: transparent; height: 90px;" data-ad-status="filled"><ins id="aswift_5_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none; height: 90px; width: 943px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;"><ins id="aswift_5_anchor" style="border: none; height: 90px; width: 943px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_5" name="aswift_5" style="left:0;position:absolute;top:0;border:0;width:943px;height:90px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="943" height="90" frameborder="0" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/ads(4).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!6" data-google-query-id="CMjWhsvWj_MCFfFCHgId6zANbg" data-load-complete="true"></iframe></ins></ins></ins></div><div id="footer">
+    <div class="container clearfix">
+        <div class="footerwidgetwrap">
+            <div class="footerwidget"><div id="nav_menu-7" class="widget widget_nav_menu"><h3 class="widget-title">О НАС</h3><ul id="menu-footer" class="menu"><li id="menu-item-11464" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11464"><a href="https://idg.net.ua/klienty/">Клиенты</a></li>
+<li id="menu-item-11465" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11465"><a href="https://idg.net.ua/portfolio/">Портфолио</a></li>
+<li id="menu-item-11466" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11466"><a href="https://idg.net.ua/kontakty/">Контакты</a></li>
+</ul></div><div class="clear"></div><div id="text-6" class="widget widget_text"><h3 class="widget-title">ПРИСОЕДИНЯЙТЕСЬ К НАМ</h3>			<div class="textwidget"><a rel="nofollow" href="https://www.facebook.com/groupindigo" target="_blank"><img title="Мы в Facebook" alt="Мы в Facebook" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/idg-fb-group.png" width="43" height="43"></a>&nbsp;<a rel="nofollow" href="https://vk.com/indigo_website" target="_blank"><img title="Мы в VK" alt="Мы в VK" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/idg-vk-group.png" width="43" height="43"></a>&nbsp;<a rel="nofollow" href="https://plus.google.com/106837611985454611093" target="_blank"><img title="Мы в Google+" alt="Мы в Google+" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/idg-google-profile.png" width="43" height="43"></a>&nbsp;<a rel="nofollow" href="https://twitter.com/idgnetua" target="_blank"><img title="Мы в Twitter" alt="Мы в Twitter" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/idg-twitter-profile.png" width="43" height="43"></a>&nbsp;<a rel="nofollow" href="https://www.linkedin.com/company/idg-indigo" target="_blank"><img title="Мы в LinkedIn" alt="Мы в LinkedIn" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/idg-linkedin-company.png" width="43" height="43"></a>&nbsp;<a rel="nofollow" href="https://www.behance.net/indigowebdesign" target="_blank"><img title="Мы в Behance" alt="Мы в Behance" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/idg-behance-company.png" width="43" height="43"></a></div>
+		</div><div class="clear"></div></div>
+            <div class="footerwidget"><div id="custom_html-2" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><ul id="menu-menu-footer-top" class="menu">
+	<li style="margin-bottom: 20px;" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1179"><a style="font-size: 14px; font-weight: bold; padding-bottom: 10px; display: block;" title="newpage" href="https://idg.net.ua/seo">Раскрутка сайта</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726"><a href="https://idg.net.ua/seo/prodvizhenie-internet-magazinov">Продвижение интернет магазина</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726"><a href="https://idg.net.ua/seo/raskrutka-sajta-v-google">Продвижение сайта в google</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-726"><a href="https://idg.net.ua/seo/seo-audit">SEO анализ сайта</a></li>
+	</ul>
+	</li>
+	
+	<li style="margin-bottom: 20px;" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-has-children menu-item-1259"><a style="font-size: 14px; font-weight: bold; padding-bottom: 10px; display: block;" href="https://idg.net.ua/">Создание сайтов</a>
+		<ul class="sub-menu">
+			<li id="menu-item-728" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-728"><a href="https://idg.net.ua/tehpodderzhka">Поддержка сайта</a></li>
+			<li id="menu-item-730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-730"><a href="https://idg.net.ua/sozdanie-internet-magazina">Создание интернет магазина</a></li>
+			<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723"><a href="https://idg.net.ua/corporative">Создание сайта корпоративного</a></li>
+			<li id="menu-item-725" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-725"><a href="https://idg.net.ua/site-visitka">Создание сайта визитки</a></li>
+			<li id="menu-item-722" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-725"><a href="https://idg.net.ua/seo/napisanie-kontenta-i-napolnenie-sajta">Наполнение сайта</a></li>
+		</ul>
+	</li>
+</ul></div></div><div class="clear"></div></div>
+            <div class="footerwidget"><div id="custom_html-3" class="widget_text widget widget_custom_html"><div class="textwidget custom-html-widget"><ul id="menu-menu-footer-top" class="menu">
+	<li style="margin-bottom: 20px;" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-716"><a style="font-size: 14px; font-weight: bold; padding-bottom: 10px; display: block;" href="https://idg.net.ua/seo/web-analitika">Веб-аналитика</a>
+	<ul class="sub-menu">
+		<li id="menu-item-1180" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1180"><a href="https://idg.net.ua/seo/tehnicheskij-audit">Технический аудит сайта</a></li>
+		<li id="menu-item-712" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-712"><a href="https://idg.net.ua/seo/audit-yuzabiliti">Юзабилити аудит</a></li>
+		<li id="menu-item-1181" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1181"><a href="https://idg.net.ua/seo/audit-sajta">Аудит сайта</a></li>
+		<li id="menu-item-1182" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1182"><a href="https://idg.net.ua/seo/analiz-konkurentnoj-sredy-v-internete">Анализ конкурентов сайта</a></li>
+	</ul>
+	</li>
+	
+	<li style="margin-bottom: 20px;" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-733"><a style="font-size: 14px; font-weight: bold; padding-bottom: 10px; display: block;" href="https://idg.net.ua/seo/uslugi-internet-marketing">Интернет-маркетинг</a>
+		<ul class="sub-menu">
+			<li id="menu-item-734" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-734"><a href="https://idg.net.ua/seo/kontekstnaya-reklama">Контекстная реклама</a></li>
+			<li id="menu-item-713" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-713"><a href="https://idg.net.ua/seo/prodvizhenie-v-sots-setyah-smo">Продвижение в социальных сетях</a></li>
+		</ul>
+	</li>
+</ul></div></div><div class="clear"></div></div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>
+<!-- Theme Hook -->
+<script async="" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(3).txt"></script>
+<!-- footer -->
+<ins class="adsbygoogle" style="display: block; height: 280px;" data-ad-client="ca-pub-2485642443475791" data-ad-slot="7965147017" data-ad-format="auto" data-full-width-responsive="true" data-adsbygoogle-status="done" data-ad-status="filled"><ins id="aswift_2_expand" style="border: none; height: 280px; width: 943px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-table;" tabindex="0" title="Advertisement" aria-label="Advertisement"><ins id="aswift_2_anchor" style="border: none; height: 280px; width: 943px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: block; overflow: visible;"><iframe id="aswift_2" name="aswift_2" style="left:0;position:absolute;top:0;border:0;width:943px;height:280px;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="943" height="280" frameborder="0" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/ads(5).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" data-google-container-id="a!3" data-google-query-id="CMKfycrWj_MCFQVRwgodP0oA_w" data-load-complete="true"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+<!-- BEGIN recaptcha, injected by plugin wp-recaptcha-integration  -->
+<script type="text/javascript">
+				function get_form_submits(el){
+					var form,current=el,ui,type,slice = Array.prototype.slice,self=this;
+					this.submits=[];
+					this.form=false;
+
+					this.setEnabled=function(e){
+						for ( var s=0;s<self.submits.length;s++ ) {
+							if (e) self.submits[s].removeAttribute('disabled');
+							else  self.submits[s].setAttribute('disabled','disabled');
+						}
+						return this;
+					};
+					while ( current && current.nodeName != 'BODY' && current.nodeName != 'FORM' ) {
+						current = current.parentNode;
+					}
+					if ( !current || current.nodeName != 'FORM' )
+						return false;
+					this.form=current;
+					ui=slice.call(this.form.getElementsByTagName('input')).concat(slice.call(this.form.getElementsByTagName('button')));
+					for (var i = 0; i < ui.length; i++) if ( (type=ui[i].getAttribute('TYPE')) && type=='submit' ) this.submits.push(ui[i]);
+					return this;
+				}
+				</script><script type="text/javascript">
+		var recaptcha_widgets={};
+		function wp_recaptchaLoadCallback(){ 
+			try {
+				grecaptcha;
+			} catch(err){
+				return;
+			}
+			var e = document.querySelectorAll ? document.querySelectorAll('.g-recaptcha:not(.wpcf7-form-control)') : document.getElementsByClassName('g-recaptcha'),
+				form_submits;
+
+			for (var i=0;i<e.length;i++) {
+				(function(el){
+					var form_submits = get_form_submits(el).setEnabled(false), wid;
+					// check if captcha element is unrendered
+					if ( ! el.childNodes.length) {
+						wid = grecaptcha.render(el,{
+							'sitekey':'6LdPYR4TAAAAAK8acGLoTl05CTw0eCdV2_fj6zDi',
+							'theme':el.getAttribute('data-theme') || 'light'
+							,
+							'callback' : function(r){ get_form_submits(el).setEnabled(true); /* enable submit buttons */ }
+						});
+						el.setAttribute('data-widget-id',wid);
+					} else {
+						wid = el.getAttribute('data-widget-id');
+						grecaptcha.reset(wid);
+					}
+				})(e[i]);
+			}
+		}
+		
+		// if jquery present re-render jquery/ajax loaded captcha elements 
+		if ( typeof jQuery !== 'undefined' )
+			jQuery(document).ajaxComplete( function(evt,xhr,set){
+				if( xhr.responseText && xhr.responseText.indexOf('6LdPYR4TAAAAAK8acGLoTl05CTw0eCdV2_fj6zDi') !== -1)
+					wp_recaptchaLoadCallback();
+			} );
+		
+		</script><script src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/api.js" async="" defer=""></script>
+<!-- END recaptcha -->
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/shCore.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/shBrushCss.js"></script>
+<script type="text/javascript">
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://idg.net.ua/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://idg.net.ua/blog/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeEclipse.css?ver=3.0.9";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['auto-links'] = false;
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+</script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/custom.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/jquery.rating.pack.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/frontend.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/comment-reply.min.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/script_2.1.2.js"></script>
+<script type="text/javascript" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/wp-embed.min.js"></script>
+<script async="" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/f(3).txt"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-2485642443475791",
+    enable_page_level_ads: true
+  });
+</script><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;"></ins><!-- Close Site Container
+  ================================================== -->
+  
+  <script>
+	jQuery.noConflict(); (function($) {
+	$(function() {
+		$('.popup').hide();
+		$('.hide-layout').css({opacity: .6});
+		alignCenter($('.popup'));
+
+		$(window).resize(function() {
+			alignCenter($('.popup'));
+		})
+		$('.click-me').click(function() {
+			$('.hide-layout, .popup').fadeIn(300);
+		})
+		$('.btn-close, .hide-layout').click(function() {
+			$('.hide-layout, .popup').fadeOut(300);
+		})
+		$('.btn-yes, .btn-no').click(function() {
+			
+			$('.hide-layout, .popup').fadeOut(300);
+		})
+		
+		function alignCenter(elem) {
+			elem.css({
+				left: ($(window).width() - elem.width()) / 2 + 'px',
+				top: ($(window).height() - elem.height()) / 2 + 'px'
+			})
+		}
+	})
+	})(jQuery);
+	</script>
+	
+	<div class="wrapper_click_me">
+					
+	<div class="wrapper">
+		<div class="popup" style="display: none; left: 221.5px; top: 319.5px;">
+
+			<div class="wpcf7" id="wpcf7-f9435-o1"><form action="https://idg.net.ua/blog/uchebnik-css/ispolzovanie-css/border-radius#wpcf7-f9435-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="9435">
+<input type="hidden" name="_wpcf7_version" value="3.7.1">
+<input type="hidden" name="_wpcf7_locale" value="ru_RU">
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f9435-o1">
+<input type="hidden" name="_wpnonce" value="336a23f914">
+</div>
+<p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Имя *"></span></p>
+<p><span class="wpcf7-form-control-wrap tel-656"><input type="tel" name="tel-656" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel" aria-required="true" aria-invalid="false" placeholder="Телефон *"></span></p>
+<p><input type="submit" value="Отправить" class="wpcf7-form-control wpcf7-submit"><img class="ajax-loader" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/ajax-loader.gif" alt="Отправка..." style="visibility: hidden;"></p>
+<div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+	<div class="btn-close" title="Закрыть" unselectable="on"></div>
+				
+</div>
+
+</div>
+<div class="hide-layout" style="opacity: 0.6;"></div>
+
+</div>
+
+
+<iframe id="google_osd_static_frame_8517538215401" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/saved_resource.html"></iframe><iframe src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/aframe.html" width="0" height="0" style="display: none;"></iframe></body><iframe id="google_esf" name="google_esf" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/zrt_lookup.html" style="display: none;"></iframe><ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important; width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; clear: none !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; position: fixed !important; vertical-align: baseline !important; visibility: visible !important; z-index: 2147483647 !important; background: transparent !important;" aria-hidden="true" data-ad-status="filled" data-vignette-loaded="true"><ins id="aswift_6_expand" tabindex="0" title="Advertisement" aria-label="Advertisement" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: inline-table !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><ins id="aswift_6_anchor" style="border: none !important; height: 100vh !important; width: 100vw !important; margin: 0px !important; padding: 0px !important; position: relative !important; visibility: visible !important; background-color: transparent !important; display: block !important; inset: auto !important; clear: none !important; float: none !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; vertical-align: baseline !important; z-index: auto !important;"><iframe id="aswift_6" name="" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" width="" height="" frameborder="0" src="./Закругление углов CSS_ свойство border-radius — учебник CSS_files/zrt_lookup(1).html" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" style="width: 100vw !important; height: 100vh !important; inset: 0px auto auto 0px !important; position: absolute !important; clear: none !important; display: inline !important; float: none !important; margin: 0px !important; max-height: none !important; max-width: none !important; opacity: 1 !important; overflow: visible !important; padding: 0px !important; vertical-align: baseline !important; visibility: visible !important; z-index: auto !important;" data-google-container-id="a!7" data-google-query-id="CN_HwsrWj_MCFVhHHgId9UEJhw" data-load-complete="true"></iframe></ins></ins></ins></html>
