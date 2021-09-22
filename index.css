@@ -6,21 +6,26 @@
     
     display: grid;
     grid-gap: 1px;
+    justify-content: center;
 }
 
 .gameField10 {
     grid-template-columns: repeat(10,30px);
     grid-template-rows: repeat(10,30px);
+    justify-content: center;
 }
 .gameField20 {
     grid-template-columns: repeat(20,30px);
     grid-template-rows: repeat(20,30px);
+    justify-content: center;
 }
 .gameField30 {
     grid-template-columns: repeat(30,30px);
     grid-template-rows: repeat(30,30px);
+    justify-content: center;
     
 }
+
 
 .cell{
     border: 2px #7922CC;
@@ -34,11 +39,22 @@
   border: 2px solid #7922CC;
     
     border-radius: 5px;
+    justify-content: center;
+
+
 }
 
-.hidden {
-    display: none;
+.flag{
+   
+    background: url(flag.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+    
 }
+
+
 
 .bomb{
     border: 2px solid rgb(209, 29, 5);
@@ -115,4 +131,49 @@ text-align: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+.winGame{
+    border: 5px #00FF7F;
+    background: hsl(0deg 0% 0% / 20%);
+    font-size: 30px;
+    color: #00FF7F;
+    font-style: initial;
+    text-align: center;
+    user-select: none;
+    background-color: #00FF7F;
+  border: 5px solid #00FF7F;
+  
+    border-radius: 5px;
+}
+
+
+
+
+
+
+.button{display: inline-block;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 -1px rgba(0,0,0,.5);
+    user-select: none;
+    padding: .7em 1.5em;
+    border: 1px solid rgb(92, 13, 88);
+    border-radius: 5px;
+    outline: none;
+    background: rgb(75, 6, 88) linear-gradient(rgb(197, 29, 161), rgb(160, 16, 129) 80%);
+    box-shadow:
+     0 6px rgb(114, 6, 117),
+     0 3px 15px rgb(221, 106, 215),
+     inset 0 1px rgb(209, 77, 221),
+     inset 0 0 3px rgb(178, 19, 192);
+    transition: .2s;
+    
+    
+    
+    
+
+}
+.hidden {
+    display: none;
 }

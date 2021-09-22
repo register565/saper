@@ -4,8 +4,8 @@
   
     <link href="index.css" rel="stylesheet">
   </head>
-  <body>
-    <button id="startGameBtn" type="button">
+  <body >
+    <button id="startGameBtn" type="button" class="button">
 
       <h6>Start game</h6>
 
@@ -13,17 +13,17 @@
 
     <div id="difficultSelectBlock" class="hidden">
       <div>
-        <button id="btn10" type="button">
+        <button id="btn10" type="button" class="button">
 
           <h6>10x10<h6>
             
         </button>
-        <button id="btn20" type="button">
+        <button id="btn20" type="button" class="button">
   
           <h6>20x20<h6>
     
         </button>
-        <button id="btn30" type="button">
+        <button id="btn30" type="button" class="button">
   
           <h6>30x30<h6>
   
@@ -31,15 +31,33 @@
       </div>
     </div>
      
-    <div id="gameField" class="gameField" >
-
+    <div id="gameField" return false class="gameField" >
+        
     </div>
     <Div id = "GameOver" class="hidden">
-      вы проиграли 
-       <button id = "btnOver" type ="button">
+      <h5>  вы проиграли <h5>
+       <button id = "btnOver" type ="button" class="button">
          Начать заново?
        </button>
     </Div>
+
+    <Div id ="Win" class="hidden">
+      <h2> Поздравляю вы победили!!!</h3>
+        <button id = "WinBtn" type="button" class="button">
+          Хотите еще?
+
+
+
+        </button>
+
+
+    </Div>
+
+    <div id=timer class="hidden">
+
+        0
+
+    </div>
 
     <script src="index.js">
 

@@ -20,6 +20,13 @@ function btnOverPressed() {
 }
 
 btnOver.addEventListener('click', btnOverPressed);
+const gameWin = document.querySelector('#Win');
+const WinBtn = document.querySelector('#WinBtn');
+function btnWinPressed() {
+  window.location.reload(false);
+
+}
+WinBtn.addEventListener('click', btnWinPressed);
 
 
 let cells = [];
@@ -45,7 +52,8 @@ function getRandomIntInclusive(min, max) {
 function renderGameField(size, maxBombNumber) {
   const gameField = document.querySelector('#gameField');
   gameField.classList.add(`gameField${size}`);
-
+  timer.classList.remove('hidden');
+  init();
   for (let rowIndex = 0; rowIndex < size; rowIndex++) {
     for (let colIndex = 0; colIndex < size; colIndex++) {
       const cellElement = document.createElement('div');
@@ -60,17 +68,28 @@ function renderGameField(size, maxBombNumber) {
         number: 0,
         isOpen: false,
         listener: null,
+        isFlag: false,
+        contextMenuListener: null
       }
 
 
       cells.push(cell);
       cell.listener = () => {
+        if (cell.isFlag) return;
+        
+          cell.el.removeEventListener('contextmenu', cell.contextMenuListener);
+    
+        
         cell.isOpen = true;
         if (cell.isBomb === true) {
           cell.el.classList.add('bomb');
           gameOver.classList.remove('hidden');
           gameField.classList.add('bomb1');
           clearField();
+          min = (`tick${min}`);
+          sec = (`tick${sec}`);
+          return init();
+          
         } else {
           cell.el.innerText = cell.number;
           if (cell.number === 0) cell.el.classList.add('numbers1');
@@ -84,12 +103,19 @@ function renderGameField(size, maxBombNumber) {
         }
         console.log('CELL row/col', cell.row, cell.col, cell.isBomb, cell.number);
       };
+      cell.contextMenuListener = () => {
+        cell.el.classList.toggle('flag');
+        cell.isFlag = !cell.isFlag;
+      
+      }
 
       cell.el.addEventListener('click', cell.listener);
+      cell.el.addEventListener('contextmenu', cell.contextMenuListener);
+      
 
     }
   }
-  generateBombs(size , maxBombNumber);
+  generateBombs(size, maxBombNumber);
 
   for (const cell of cells) {
     const cellsAround = getCellsAround(cell.col, cell.row);
@@ -117,6 +143,7 @@ function renderGameField(size, maxBombNumber) {
 function clearField() {
   for (const cell of cells) {
     cell.el.removeEventListener('click', cell.listener);
+
   }
   // gameField.innerHTML = '';
   cells = [];
@@ -159,7 +186,11 @@ function openAroundCells(cell) {
 function sideToCells(cell) {
   if (cell == null) return;
   if (cell.isOpen) return;
+  if (cell.isFlag) return;
 
+  cell.el.removeEventListener('contextmenu', cell.contextMenuListener);
+  
+  
   cell.isOpen = true;
   cell.el.innerText = cell.number;
   cell.el.classList.add(`numbers${cell.number + 1}`);
@@ -176,13 +207,17 @@ function checkWin() {
     }
     if (cell.isBomb && cell.isOpen) {
       isWin = false;
-      
+
       break;
     }
   }
 
-  if (isWin) alert('WIN');
-  return isWin;
+  if (isWin) {
+    gameField.classList.add('winGame');
+    gameWin.classList.remove('hidden');
+    tick(stop);
+    return isWin;
+  }
 }
 
 function generateBombs(size, maxBombNumber) {
@@ -197,4 +232,54 @@ function generateBombs(size, maxBombNumber) {
       cell.isBomb = true;
     }
   }
+}
+window.addEventListener('contextmenu', (e) => {e.preventDefault()})
+
+min = 0;
+hour = 0;
+function init() {
+    sec = 0;
+    setInterval(tick, 1000);
+}
+const timer = document.querySelector('#timer');
+function tick() {
+    
+    sec++;
+    if (sec >= 60) { 
+        min++;
+        sec = sec - 60;
+    }
+    if (min >= 60) {
+        hour++;
+        min = min - 60;
+    }
+    if (sec < 10) { 
+        if (min < 10) {
+            if (hour < 10) {
+                timer.innerHTML ='0' + hour + ':0' + min + ':0' + sec;
+            } else {
+                timer.innerHTML = hour + ':0' + min + ':0' + sec;
+            }
+        } else {
+            if (hour < 10) {
+                timer.innerHTML = '0' + hour + ':' + min + ':0' + sec;
+            } else {
+                timer.innerHTML = hour + ':' + min + ':0' + sec;
+            }
+        }
+    } else {
+        if (min < 10) {
+            if (hour < 10) {
+                timer.innerHTML = '0' + hour + ':0' + min + ':' + sec;
+            } else {
+                timer.innerHTML = hour + ':0' + min + ':' + sec;
+            }
+        } else {
+            if (hour < 10) {
+                timer.innerHTML = '0' + hour + ':' + min + ':' + sec;
+            } else {
+                timer.innerHTML = hour + ':' + min + ':' + sec;
+            }
+        }
+    }
 }
