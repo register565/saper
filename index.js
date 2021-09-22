@@ -86,9 +86,9 @@ function renderGameField(size, maxBombNumber) {
           gameOver.classList.remove('hidden');
           gameField.classList.add('bomb1');
           clearField();
-          min = (`tick${min}`);
-          sec = (`tick${sec}`);
-          return init();
+          isGameEnd = true;
+          
+          
           
         } else {
           cell.el.innerText = cell.number;
@@ -215,7 +215,7 @@ function checkWin() {
   if (isWin) {
     gameField.classList.add('winGame');
     gameWin.classList.remove('hidden');
-    tick(stop);
+    isGameEnd = true;
     return isWin;
   }
 }
@@ -239,10 +239,13 @@ min = 0;
 hour = 0;
 function init() {
     sec = 0;
-    setInterval(tick, 1000);
+    setTimeout(tick, 1000);
+
 }
 const timer = document.querySelector('#timer');
 function tick() {
+  if ( !isGameEnd) setTimeout(tick, 10);
+ 
     
     sec++;
     if (sec >= 60) { 
@@ -283,3 +286,5 @@ function tick() {
         }
     }
 }
+
+let isGameEnd = false;
