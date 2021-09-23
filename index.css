@@ -1,27 +1,28 @@
 .gameField {
     width: fit-content;
     height: fit-content;
-    padding: 0px;
-    background:rgba(194, 88, 171, 0.281);
+    padding: 20px  rgba(255, 0, 0, 0);
+    background:rgba(194, 88, 171, 0);
     
     display: grid;
     grid-gap: 1px;
     justify-content: center;
+    margin: 15px;
 }
 
 .gameField10 {
-    grid-template-columns: repeat(10,30px);
-    grid-template-rows: repeat(10,30px);
+    grid-template-columns: repeat(10,25px);
+    grid-template-rows: repeat(10,25px);
     justify-content: center;
 }
 .gameField20 {
-    grid-template-columns: repeat(20,30px);
-    grid-template-rows: repeat(20,30px);
+    grid-template-columns: repeat(20,25px);
+    grid-template-rows: repeat(20,25px);
     justify-content: center;
 }
 .gameField30 {
-    grid-template-columns: repeat(30,30px);
-    grid-template-rows: repeat(30,30px);
+    grid-template-columns: repeat(30,25px);
+    grid-template-rows: repeat(30,25px);
     justify-content: center;
     
 }
@@ -29,18 +30,18 @@
 
 .cell{
     border: 2px #7922CC;
-    background: hsl(0deg 0% 0% / 20%);
-    font-size: 30px;
+    background: hsl(0deg 0% 0% / 100%);
+    font-size: 25px;
     color: #7922CC;
     font-style: initial;
     text-align: center;
     user-select: none;
-    background-color: #EEDDFF;
+    background-color: #eeddff;
   border: 2px solid #7922CC;
     
     border-radius: 5px;
     justify-content: center;
-
+        transition: all 0.4s;
 
 }
 
@@ -50,7 +51,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-   
+    
     
 }
 
@@ -62,6 +63,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 4px;
 }
 
 .numbers1{
@@ -77,7 +79,7 @@
 .numbers2 {
     border: 2px solid #00CED1;
     background-color: #E0FFFF	;
-    font-size: 25px ;
+    font-size: 21px ;
     color: rgb(18, 109, 55);
     font-style: initial;
     text-align: center;
@@ -87,7 +89,7 @@
 .numbers3{
     border: 2px solid #00CED1;
 background-color: #E0FFFF	;
-font-size: 27px ;
+font-size: 21px ;
 color: rgb(168, 166, 1);
 font-style: initial;
 text-align: center;
@@ -97,7 +99,7 @@ text-align: center;
 
     border: 2px solid #00CED1;
     background-color: #E0FFFF	;
-    font-size: 27px ;
+    font-size: 21px ;
     color: rgb(139, 104, 6);
     font-style: initial;
     text-align: center;
@@ -108,7 +110,7 @@ text-align: center;
 
     border: 2px solid #00CED1;
     background-color: #E0FFFF	;
-    font-size: 27px ;
+    font-size: 21px ;
     color: rgb(196, 52, 8);
     font-style: initial;
     text-align: center;
@@ -119,29 +121,31 @@ text-align: center;
 
     border: 2px solid #00CED1;
     background-color: #E0FFFF	;
-    font-size: 27px ;
+    font-size: 21px ;
     color: rgb(0, 0, 0);
     font-style: initial;
     text-align: center;
 
 }
 .bomb1{
-    border: 2px solid rgb(209, 29, 5);
+    border: 4px solid rgb(209, 29, 5);
     background-color: red;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    border-radius: 10px;
 }
 .winGame{
     border: 5px #00FF7F;
     background: hsl(0deg 0% 0% / 20%);
-    font-size: 30px;
+    font-size: 25px;
     color: #00FF7F;
     font-style: initial;
     text-align: center;
     user-select: none;
     background-color: #00FF7F;
   border: 5px solid #00FF7F;
+  margin: 20px;
   
     border-radius: 5px;
 }
@@ -167,13 +171,107 @@ text-align: center;
      0 3px 15px rgb(221, 106, 215),
      inset 0 1px rgb(209, 77, 221),
      inset 0 0 3px rgb(178, 19, 192);
-    transition: .2s;
+    transition: .5s;
+    margin: 40px;
+    
     
     
     
     
 
 }
+
+.button:hover {
+    background: rgb(173, 29, 209) linear-gradient(rgb(133, 10, 102), rgb(177, 81, 206) 80%);
+  }
+  .button:active {
+    background: rgb(90, 14, 97) linear-gradient(rgb(110, 31, 175) 20%, rgb(194, 74, 168));
+    box-shadow:
+     0 2px rgb(155, 26, 138),
+     0 1px 6px rgba(0,0,0,.4),
+     inset 0 1px rgba(255,255,255,.3),
+     inset 0 0 3px rgba(255,255,255,.5);
+    -webkit-transform: translate(0, 4px);
+    transform: translate(0, 4px);
+  }
+
+body {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow: auto;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:#5acef1;
+    
+  }
+  .outer {
+    background-color: #1f2120;
+    border-radius: 30px;
+    padding: 10px 10px;
+    box-shadow: inset 0px -4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px #4c5250;
+  }
+  .inner {
+    border-radius: 12px;
+    display: flex;
+    color: #fafafa;
+    align-items: baseline;
+    padding: 10px 15px ;
+    font-size: 45px;
+    background: #e37eec;
+    
+  }
+  .minute-box {
+    margin-right: 5px;
+    background-color: #1f2120;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: inset 0px -1px 1px #75746f, inset 0px 1px 1px #75746f;
+  }
+  .second-box {
+    border-radius: 10px;
+    margin-left: 5px;
+    background-color: #1f2120;
+    padding: 5px 10px;
+    box-shadow: inset 0px -1px 1px #75746f, inset 0px 1px 1px #75746f;
+  }
+  p {
+    margin: 0;
+    color: #758779;
+  }
+  .timer-button {
+    width: 10px;
+    height: 50px;
+    background-color: #1f2120;
+    border-radius: 10px;
+    margin-left:-3px;
+  }
+  .parent-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top:10%;
+  }
+
+
 .hidden {
     display: none;
+
+
 }
+ .dive{
+     color :#be4dc9;
+     text-shadow: 1ch  1ch 1ch 1ch rgb(121, 230, 179);
+     font-size: 4ch;
+    border : 1px rgb(102, 255, 166);
+     width: 70%;
+     height: 200%;
+     margin: 20px;
+     font-family: sans;
+	
+
+ }

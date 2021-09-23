@@ -53,6 +53,7 @@ function renderGameField(size, maxBombNumber) {
   const gameField = document.querySelector('#gameField');
   gameField.classList.add(`gameField${size}`);
   timer.classList.remove('hidden');
+  timer.classList.add('inner');
   init();
   for (let rowIndex = 0; rowIndex < size; rowIndex++) {
     for (let colIndex = 0; colIndex < size; colIndex++) {
@@ -244,7 +245,7 @@ function init() {
 }
 const timer = document.querySelector('#timer');
 function tick() {
-  if ( !isGameEnd) setTimeout(tick, 10);
+  if ( !isGameEnd) setTimeout(tick, 1000);
  
     
     sec++;
@@ -288,3 +289,5 @@ function tick() {
 }
 
 let isGameEnd = false;
+
+
