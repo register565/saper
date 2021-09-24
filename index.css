@@ -155,7 +155,7 @@ text-align: center;
 
 
 
-.button{display: inline-block;
+.Qbutton{display: inline-block;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
@@ -181,10 +181,10 @@ text-align: center;
 
 }
 
-.button:hover {
+.Qbutton:hover {
     background: rgb(173, 29, 209) linear-gradient(rgb(133, 10, 102), rgb(177, 81, 206) 80%);
   }
-  .button:active {
+  .Qbutton:active {
     background: rgb(90, 14, 97) linear-gradient(rgb(110, 31, 175) 20%, rgb(194, 74, 168));
     box-shadow:
      0 2px rgb(155, 26, 138),
@@ -258,13 +258,9 @@ body {
   }
 
 
-.hidden {
-    display: none;
 
-
-}
  .dive{
-     color :#be4dc9;
+     color :#f8f8f8;
      text-shadow: 1ch  1ch 1ch 1ch rgb(121, 230, 179);
      font-size: 4ch;
     border : 1px rgb(102, 255, 166);
@@ -275,3 +271,47 @@ body {
 	
 
  }
+ body {
+    background: url(neon1.png);
+  }
+  .button {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 20px;
+    padding: 15px 30px;
+    overflow: hidden;
+    border: 2px solid;
+    border-bottom-width: 4px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: rgba(30, 255, 188, 1);
+    background: rgba(255, 255, 255, 1);
+    transition: color .3s, background .5s;
+    font-size: 25px;
+    
+  }
+  .button:hover {
+    --c1: rgba(30, 255, 188, 0.8);
+    --c2: rgba(255, 255, 255, 0.8);
+    animation: stripes 1.20s infinite linear;
+
+    background: linear-gradient(45deg, var(--c1) 25%, var(--c2) 25%, var(--c2) 50%, var(--c1) 50%, var(--c1) 75%, var(--c2) 75%, var(--c2));
+
+    background-size: 10px 10px;
+    color: #e000be00;
+  }
+  @keyframes stripes {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 50px 0;
+    }
+  }
+  .hidden {
+    display: none;
+
+
+}
